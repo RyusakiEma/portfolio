@@ -6,24 +6,36 @@
     <title>Emanuel Torres | Web developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="body">
     <div class="container">
-        <header class="nav-container">
+        <header class="nav-container" id="navBar">
             <nav class="main-menu">
                 <div class="nav__logo">
                     <a class="logo-link" href="#">Resume</a>
                 </div>
                 <div class="nav-links">
                     <ul class="nav__list">
-                        <li class="nav__listItem"><a href="#" class="nav__listLink">About</a></li>
+                        <li class="nav__listItem"><a href="#aboutSection" class="nav__listLink">About</a></li>
                         <li class="nav__listItem"><a href="#projectSection" class="nav__listLink">Projects</a></li>
                         <li class="nav__listItem"><a href="#contactSection" class="nav__listLink">Contact</a></li>
                     </ul>
-                    <div>
-                        menu
+                    <div class="menu-icon" id="menubars">
+                        <div class="menu-icon-bar"></div>
                     </div>
                 </div>
             </nav>
+            <div class="sidenav-container" id="sideNav" aria-hidden="false" tabindex="1">
+                <div class="hide-sidenav" id="hidenav"></div>
+                <aside class="sidenav">
+                   <nav class="sidenav-links">
+                        <ul class="sidenav-list">
+                            <li class="sidenav-list-items"><a class="sidenav-list-link" href="#aboutSection">About</a></li>
+                            <li class="sidenav-list-items"><a class="sidenav-list-link" href="#projectSection">Projects</a></li>
+                            <li class="sidenav-list-items"><a class="sidenav-list-link" href="#contactSection">Contact</a></li>
+                        </ul>
+                   </nav>
+                </aside>
+            </div>
         </header>
         <div class="content">
             <main class="sections main-container">
@@ -43,7 +55,7 @@
                     </div>
                 </section>
                 <!-- About me -->
-                <section class="sections">
+                <section id="aboutSection" class="sections">
                    <div class="about-section">
                         <div class="profile-picture">
                             <img src="https://picsum.photos/400" alt="">
@@ -91,15 +103,15 @@
                                 </div>
                                 <div class="project-languajes-container">
                                     <ul class="project-languajes-list">
-                                        <li>Angular</li>
-                                        <Li>Nodejs</Li>
-                                        <li>Express</li>
-                                        <li>MongoDB</li>
-                                        <li class="wrap-link"><a class="uni" 
+                                        <li class="languajes-list-item">Angular</li>
+                                        <li class="languajes-list-item">Nodejs</li>
+                                        <li class="languajes-list-item">Express</li>
+                                        <li class="languajes-list-item">MongoDB</li>
+                                        <li class="languajes-list-item"><a class="uni" 
                                             href="https://mdbootstrap.com/docs/angular/"
                                             target="_blank">MDBootstrap</a>
                                         </li>
-                                      <li class="link-svg-icon wrap-link">
+                                      <li class="link-svg-icon languajes-list-item">
                                         <a class="uni" href="http://celularesnica.com" target="_blank">
                                             <img src="./assets/icons/external-link.svg" alt="link" 
                                         ></a>
@@ -129,12 +141,12 @@
                                 </div>
                                 <div class="project-languajes-container">
                                     <ul class="project-languajes-list">
-                                        <li>Angular</li>
-                                        <li><a class="uni" 
+                                        <li class="languajes-list-item">Angular</li>
+                                        <li class="languajes-list-item"><a class="uni" 
                                             href="https://mdbootstrap.com/docs/angular/"
                                             target="_blank">MDBootstrap</a>
                                         </li>
-                                        <li class="link-svg-icon">
+                                        <li class="link-svg-icon languajes-list-item">
                                             <a class="uni" href="http://grekoostudio.com" target="_blank">
                                                 <img src="./assets/icons/external-link.svg" alt="link" 
                                             ></a>
@@ -187,5 +199,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>
