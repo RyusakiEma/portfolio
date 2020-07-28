@@ -18,6 +18,17 @@ body{
     margin:0px;
 }
 
+
+@keyframes fadeDown{
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .no-scroll{
     overflow: hidden;
 }
@@ -91,6 +102,19 @@ body{
     font-size: 15px;
     margin: 0 10px;
 }
+
+.nav__listItem:first-child{
+    animation: fadeDown 400ms;
+}
+
+.nav__listItem:nth-child(2){
+    animation: fadeDown 600ms;
+}
+
+.nav__listItem:last-child{
+    animation: fadeDown 800ms;
+}
+
 
 .nav__listLink{
     padding: 12px 10px;
@@ -500,6 +524,12 @@ body{
     border: 2px solid var(--link);
 }
 
+@media (min-width: 1200px) and (max-width: 1400px){
+    .sections:first-child{
+        padding-top: 110px;
+    }
+}
+
 @media (max-width: 1199.98px) {
     .sections {
         padding: 200px 30px 150px 0;
@@ -520,13 +550,12 @@ body{
     }
 }
 
+@media (max-width: 992px){
+    .profile-title, .profile-second-title {
+        font-size: 50px;
+    }
 
- /* Large devices (desktops, 992px and up) */
- @media (max-width: 992px) { 
-
- }
-
-
+}
 
 
 /* Small devices (landscape phones, 576px ) and Medium devices (tablets, 768px)*/
@@ -548,7 +577,7 @@ body{
 
     .sections{
         max-width: 576px;
-        padding: 60px 0 140px 0;
+        padding: 80px 0 140px 0;
     }
 
     .profile-title, .profile-second-title {
