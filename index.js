@@ -5,17 +5,20 @@ const sidenavLinks = document.querySelectorAll('.sidenav-list-items')
 const hidenav = document.getElementById('hidenav');
 //SECTIONS
 const aboutSection = document.getElementById('aboutSection');
+const projectSection = document.getElementById('projectSection');
 const celularesnica = document.getElementById('celularesnica');
 const grekoostudio = document.getElementById('grekoostudio');
+const sectionTitles = document.querySelectorAll('.section-titles')
 
 //Add shadow navbar on scroll
 window.onscroll  = () => {
     adddNavShadow();
 
     fadeUpScoroll(aboutSection);
+    fadeUpScoroll(projectSection);
     fadeUpScoroll(celularesnica);
     fadeUpScoroll(grekoostudio);
-    
+
 }
 
 // fadeup animation sections on scroll

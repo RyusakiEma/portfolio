@@ -423,8 +423,27 @@ body{
 }
 
 .section-titles{
+    overflow-x: hidden;
+    display: relative;
     padding-bottom: 1rem;
+}
+
+.section-titles::after{
+    content: '';
+    display: block;
+    margin-top: 1rem;
+    background-color: red;
     border-bottom: 1px solid var(--link);
+    animation: fadeRight 800ms;
+}
+
+@keyframes fadeRight{
+    0%{
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 .about-description, .project-description{
