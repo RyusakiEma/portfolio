@@ -1,3 +1,4 @@
+let  screenHeight = window.innerHeight;
 const menubar = document.getElementById('menubars');
 const navBar = document.getElementById('navBar');
 const sideNav = document.getElementById('sideNav');
@@ -12,20 +13,34 @@ const sectionTitles = document.querySelectorAll('.section-titles')
 
 //Add shadow navbar on scroll
 window.onscroll  = () => {
+
     adddNavShadow();
 
-    fadeUpScoroll(aboutSection);
-    fadeUpScoroll(projectSection);
-    fadeUpScoroll(celularesnica);
-    fadeUpScoroll(grekoostudio);
+    fadeRightBorder();
+
+    fadeUpScroll(aboutSection);
+    fadeUpScroll(projectSection);
+    fadeUpScroll(celularesnica);
+    fadeUpScroll(grekoostudio);  
 
 }
 
+getElementPosition = (element)=>{
+    return element.getBoundingClientRect().top
+}
+
+fadeRightBorder = () =>{
+    sectionTitles.forEach(title =>{
+        let titlePosition = getElementPosition(title);
+        if(titlePosition < screenHeight){
+            title.style.setProperty('--fadeRight', 'fadeRight 800ms running');
+        } 
+    })
+}
+
 // fadeup animation sections on scroll
-const fadeUpScoroll = (section)=>{
-    let sectionPosition = section.getBoundingClientRect().top;
-    let screenHeight = window.innerHeight;
- 
+const fadeUpScroll = (section)=>{
+    let sectionPosition = getElementPosition(section);
     if(sectionPosition < screenHeight){
         section.style.animation = 'fadeUp 1.11s'
     }
