@@ -2,7 +2,6 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const path = require('path');
 
 module.exports = {
     entry: './src/app.js',
@@ -34,6 +33,17 @@ module.exports = {
                         name: '[name].[ext]',
                         outputPath: 'images/',
                         useRelativePath:true
+                    }
+                   }
+                ]
+            },
+            {
+                test: /\.(pdf)$/,
+                use:[
+                   {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
                     }
                    }
                 ]

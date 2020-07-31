@@ -6,6 +6,7 @@ import './images/linkedin-icon.svg';
 import './images/paper-plain.svg';
 import './images/dashboard.png';
 import './images/grekoo1.png';
+import './resume.pdf'
 let  screenHeight = window.innerHeight;
 const menubar = document.getElementById('menubars');
 const navBar = document.getElementById('navBar');
