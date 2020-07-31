@@ -51,7 +51,7 @@ const fadeRightBorder = () =>{
 const fadeUpScroll = (section)=>{
     let sectionPosition = getElementPosition(section);
     if(sectionPosition < screenHeight){
-        section.style.animation = 'fadeUp 1.11s'
+        section.style.animation = 'fadeUp 1.11s forwards'
     }
 }
 // Side nav show and hide

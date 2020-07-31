@@ -429,6 +429,10 @@ body{
 }
 
 /* ABOUT ME SECTION */
+#about, #projects, #celularesnica, #grekoostudio{
+    opacity: 0;
+}
+
 .about-section{
    display: grid;
    margin-top: 30px;
