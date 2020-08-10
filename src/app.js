@@ -1,4 +1,5 @@
 import './styles.css';
+import './images/favicon.ico'
 import './images/ema.jpeg';
 import './images/external-link.svg';
 import './images/github-icon.svg';

@@ -25,7 +25,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
                 use:[
                    {
                     loader: 'file-loader',
@@ -52,7 +52,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
+            favicon: './src/images/favicon.ico',
         }),
         new MiniCssExtractPlugin({
             filename: 'bundle.css'
