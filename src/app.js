@@ -1,12 +1,14 @@
 import './styles.css';
 import './images/favicon.ico'
-import './images/ema.jpeg';
+import './images/ema.jpg';
 import './images/external-link.svg';
 import './images/github-icon.svg';
 import './images/linkedin-icon.svg';
 import './images/paper-plain.svg';
 import './images/dashboard.png';
 import './images/grekoo1.png';
+import './images/tapiceria.png'
+import './images/reconciliation.png';
 import './resume.pdf'
 let  screenHeight = window.innerHeight;
 const menubar = document.getElementById('menubars');
@@ -17,7 +19,9 @@ const hidenav = document.getElementById('hidenav');
 //SECTIONS
 const aboutSection = document.getElementById('about');
 const projectSection = document.getElementById('projects');
+const rpasite = document.getElementById('rpasite')
 const celularesnica = document.getElementById('celularesnica');
+const tapiceriatrana =document.getElementById('tapiceriatrana')
 const grekoostudio = document.getElementById('grekoostudio');
 const sectionTitles = document.querySelectorAll('.section-titles')
 
@@ -30,7 +34,9 @@ window.onscroll  = () => {
 
     fadeUpScroll(aboutSection);
     fadeUpScroll(projectSection);
+    fadeUpScroll(rpasite)
     fadeUpScroll(celularesnica);
+    fadeUpScroll(tapiceriatrana)
     fadeUpScroll(grekoostudio);  
 
 }
